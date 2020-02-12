@@ -42,6 +42,13 @@
 13. `SWAGGER_URL=localhost:8000` 
 14. `LOG_LEVEL = TRACE`
 19. `ENABLE_SWAGGER=true`
+
+## Codeclimate Badges
+
+01. `[![Maintainability](https://api.codeclimate.com/v1/badges/c9af0f551697c589467a/maintainability)](https://codeclimate.com/github/darhamid/tajawal-backend/maintainability)`
+
+02. `[![Test Coverage](https://api.codeclimate.com/v1/badges/c9af0f551697c589467a/test_coverage)](https://codeclimate.com/github/darhamid/tajawal-backend/test_coverage)`
+
 ## Service Dependencies:
 
 ### Upstream
