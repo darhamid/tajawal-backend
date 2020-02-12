@@ -587,7 +587,7 @@ export const swaggerDocument = () => ({
 			]
 		},
 		SavedHotel: {
-			title: 'SavedMilestoneResponse',
+			title: 'SavedHotelResponse',
 			example: {
 				_id: "5e43b1a3e112ec0461f766b3",
 				name: "Media One Hotel",

@@ -59,7 +59,7 @@
 ## Ports Used:
 
 01.  **8000**
-02.  **27017**
+02.  **29017**
 
 ### APIs
 
@@ -68,8 +68,6 @@
   Api Url : {URL}/hotels
   
   Method : POST
-
-  Authorization: Required
 
   Description : store hotel details
 
@@ -115,15 +113,65 @@
         ],
         "__v": 0
 }
+```
+
+**2. Update hotel details**
+
+  Api Url : {URL}/hotels
+  
+  Method : PUT
+
+  Description : store hotel details
+
+  Body: 
+  
+
+``` json
+    {
+        "name" : "Hotel Grand Hyatt",
+        "price" : 700,
+        "city" : "Dubai",
+        "availability" : [
+            {
+                "from" : "2020-10-05T11:12:23.000",
+                "to" : "2020-10-10T11:12:23.000"
+            },
+            {
+                "from" : "2020-10-15T11:12:23.000",
+                "to" : "2020-10-25T11:12:23.000"
+            }
+        ]
+    }
    ```
 
-**2. Get milestone by id**
+   Response: 200 
+   
+
+``` json
+   {
+        "id" : "5e43b1a3e112ec0461f766b3",
+        "name" : "Hotel Grand Hyatt",
+        "price" : 700,
+        "city" : "Dubai",
+        "availability": [
+            {
+                "from" : "2020-10-05T11:12:23.000",
+                "to" : "2020-10-10T11:12:23.000"
+            },
+            {
+                "from" : "2020-10-15T11:12:23.000",
+                "to" : "2020-10-25T11:12:23.000"
+            }
+        ],
+        "__v": 0
+}
+```
+
+**2. Get hotel by id**
 
   Api Url : {URL}/hotels/:id
   
   Method : GET
-
-  Authorization: Required
 
   Description : Get hotel by id
 
@@ -156,8 +204,6 @@
   
   Method : GET
 
-  Authorization: Required
-
   Description : Get all hotels
 
   Optional : index and size
@@ -166,49 +212,59 @@
    
 
 ``` json
-   {
-    "_id": "rewards_added@1.0.0",
-    "type": "rewards_added",
-    "version": "1.0.0",
-    "isEnabled": true,
-    "milestones": [{
-            "id": "milestone100",
-            "title": "You've earned your first 100 points. 💯",
-            "message": "Great start! 🙂",
-            "expression": "{{previousValue}} < {{stastics.milestoneValue}} && {{currentValue}} >= {{stastics.milestoneValue}}",
-            "stastics": {
-                "milestoneValue": 100
+   [{ 
+        "_id" :"5e43b1a3e112ec0461f766b3", 
+        "name" : "Hotel Grand Hyatt", 
+        "price" : 700, 
+        "city" : "Dubai", 
+        "availability" : [
+            {
+                "from" : "2020-10-05T11:12:23.000", 
+                "to" : "2020-10-10T11:12:23.000"
+            }, 
+            {
+                "from" : "2020-10-15T11:12:23.000", 
+                "to" : "2020-10-25T11:12:23.000"
             }
-        },
-        {
-            "id": "milestone500",
-            "title": "You've earned your first 500 points. ✔",
-            "message": "Well done! You're getting the hang of it. 😉",
-            "expression": "{{previousValue}} < {{stastics.milestoneValue}} && {{currentValue}} >= {{stastics.milestoneValue}}",
-            "stastics": {
-                "milestoneValue": 500
+        ], 
+        "createdAt" : "2020-02-12T08:04:51.896", 
+        "updatedAt" : "2020-02-12T11:23:48.115", 
+        "__v" : 0
+    }
+    { 
+        "_id" :"5e43d9ea2bcc31027102666a"), 
+        "name" : "Al Bateen Hotel", 
+        "price" : 600, 
+        "city" : "Abu Dhabi", 
+        "availability" : [
+            {
+                "from" : "2020-10-05T11:12:23.000", 
+                "to" : "2020-10-10T11:12:23.000"
+            }, 
+            {
+                "from" : "2020-10-15T11:12:23.000", 
+                "to" : "2020-10-25T11:12:23.000"
             }
-        },
-        {
-            "id": "milestone1000",
-            "title": "You now have 1000 points. 🧨",
-            "message": "Way to go! Looks like you're enjoying it. 😃",
-            "expression": "{{previousValue}} < {{stastics.milestoneValue}} && {{currentValue}} >= {{stastics.milestoneValue}}",
-            "stastics": {
-                "milestoneValue": 1000
+        ], 
+        "createdAt" : "2020-02-12T10:56:42.277", 
+        "updatedAt" : "2020-02-12T10:56:42.277", 
+        "__v" : 0)
+    }
+    { 
+        "_id" :"5e43da502bcc31027102666b", 
+        "name" : "Al Reem Hotel", 
+        "price" : 600, 
+        "city" : "Abu Dhabi", 
+        "availability" : [
+            {
+                "from" : "2020-10-05T11:12:23.000", 
+                "to" : "2020-10-10T11:12:23.000"
             }
-        },
-        {
-            "id": "milestone2000",
-            "title": "You now have 2000 points. ✨",
-            "message": "Yay! Hardcore learner in the house. 😁",
-            "expression": "{{previousValue}} < {{stastics.milestoneValue}} && {{currentValue}} >= {{stastics.milestoneValue}}",
-            "stastics": {
-                "milestoneValue": 2000
-            }
-        }
-    ],
-    "__v": 0
+        ], 
+        "createdAt" : "2020-02-12T10:58:24.909", 
+        "updatedAt" : "2020-02-12T10:58:24.909", 
+        "__v" : 0
+    }]
 }
    ```
 **4. Delete hotel**
@@ -217,8 +273,6 @@
   
   Method : DELETE
 
-  Authorization: Required
-
   Description : Delete hotel based on id
 
   Response: 200 
@@ -226,9 +280,19 @@
 
 ``` json
    {
-    "n": 1,
-    "ok": 1,
-    "deletedCount": 1
+        "_id" :"5e43da502bcc31027102666b", 
+        "name" : "Al Reem Hotel", 
+        "price" : 600, 
+        "city" : "Abu Dhabi", 
+        "availability" : [
+            {
+                "from" : "2020-10-05T11:12:23.000", 
+                "to" : "2020-10-10T11:12:23.000"
+            }
+        ], 
+        "createdAt" : "2020-02-12T10:58:24.909", 
+        "updatedAt" : "2020-02-12T10:58:24.909", 
+        "__v" : 0
    }
-   ```
+```
 
