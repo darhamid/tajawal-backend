@@ -8,7 +8,7 @@ env:
   - APP_PORT=8000
   - MONGO_DB_NAME=hotetdb
   - MONGO_DB_URL=mongodb://tajawal-hotelapp-mongodb/hoteldb
-  - LOGGER_CONFIG=`{"appenders":{"out":{"type":"stdout","layout":{"type":"pattern","pattern":"%[[%d] [%p] %c - %G{correlationId}%] - %m%n"}}},"categories":{"default":{"appenders":["out"],"level":"info"}}}`
+  - LOGGER_CONFIG={'appenders':{'out':{'type':'stdout','layout':{'type':'pattern','pattern':'%[[%d] [%p] %c ] - %m%n'}}},'categories':{'default':{'appenders':['out'],'level':'info'}}}
   - SWAGGER_URL=localhost:8000
   - ENABLE_SWAGGER=true
 cache:
