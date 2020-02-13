@@ -45,9 +45,11 @@
 
 ## Codeclimate Badges
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/c9af0f551697c589467a/maintainability)](https://codeclimate.com/github/darhamid/tajawal-backend/maintainability)
+# Maintainability [![Maintainability](https://api.codeclimate.com/v1/badges/c9af0f551697c589467a/maintainability)](https://codeclimate.com/github/darhamid/tajawal-backend/maintainability)
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/c9af0f551697c589467a/test_coverage)](https://codeclimate.com/github/darhamid/tajawal-backend/test_coverage)
+# Test Coverage [![Test Coverage](https://api.codeclimate.com/v1/badges/c9af0f551697c589467a/test_coverage)](https://codeclimate.com/github/darhamid/tajawal-backend/test_coverage)
+
+## Travis Badge [![Build Status](https://travis-ci.org/darhamid/tajawal-backend.svg?branch=master)](https://travis-ci.org/darhamid/tajawal-backend)
 
 ## Service Dependencies:
 

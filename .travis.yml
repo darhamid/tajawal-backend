@@ -15,6 +15,7 @@ cache:
     - node_modules
 services:
   - mongodb
+  - docker
 notifications:
   email:
     - darhameed@gmail.com
@@ -24,4 +25,4 @@ install:
  - ln -s ./node_modules/.bin/nyc ./nyc
 before_script:
  - npm run build
- - npm run test 
+ - ./test.sh
