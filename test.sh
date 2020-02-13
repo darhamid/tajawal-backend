@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#npm install --registry http://scr.saal.ai:4873
+#npm install
 
 docker run                  \
     --rm                    \

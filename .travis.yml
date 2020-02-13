@@ -22,6 +22,7 @@ notifications:
 install:
  - npm install
  - ln -s ./node_modules/.bin/mocha ./mocha
+ - ln -s ./node_modules/.bin/nyc ./nyc
 before_script:
  - npm run build
  - npm run test 
