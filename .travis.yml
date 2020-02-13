@@ -1,0 +1,27 @@
+sudo: false
+language: node_js
+node_js:
+  - "10"
+env:
+  - NODE_ENV=development
+  - APP_HOST=localhost
+  - APP_PORT=8000
+  - MONGO_DB_NAME=hotetdb
+  - MONGO_DB_URL=mongodb://tajawal-hotelapp-mongodb/hoteldb
+  - LOGGER_CONFIG={"appenders":{"out":{"type":"stdout","layout":{"type":"pattern","pattern":"%[[%d] [%p] %c - %G{correlationId}%] - %m%n"}}},"categories":{"default":{"appenders":["out"],"level":"info"}}}
+  - SWAGGER_URL=localhost:8000
+  - ENABLE_SWAGGER=true
+cache:
+  directories:
+    - node_modules
+services:
+  - mongodb
+notifications:
+  email:
+    - darhameed@gmail.com
+install:
+ - npm install
+ - ln -s ./node_modules/.bin/mocha ./mocha
+before_script:
+ - npm run build
+ - npm run test 
