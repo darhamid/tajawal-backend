@@ -5,7 +5,7 @@ import { Response } from 'express';
 import { IPaging } from '../models/entities/Paging';
 import { ServerError } from '../exceptions/ServerError';
 import { InvalidRequestError } from '../exceptions/InvalidRequestError';
-import { IHotel } from '../../dist/models/Hotel';
+import { IHotel } from './../models/Hotel';
 const logger = loggerFactory.getLogger('HotelController');
 
 export class HotelController {

@@ -6,7 +6,7 @@
     "stagingstart": "export NODE_ENV=staging && npm run start",
     "teststart": "export NODE_ENV=test && npm run start",
     "dev": "./node_modules/.bin/nodemon -L -e .ts -w src --exec \"./node_modules/ts-node/dist/bin.js src\"",
-    "build": "./node_modules/.bin/tsc --p tsconfig.json",
+    "build": "rm -rf ./dist && ./node_modules/.bin/tsc --p tsconfig.json",
     "start": "node dist --max-old-space-size=8192 –max-new-space-size=2048",
     "prestart": "npm install",
     "test": "./node_modules/.bin/nyc mocha 'test/**/*.spec.ts'",
