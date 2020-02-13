@@ -25,4 +25,5 @@ install:
  - ln -s ./node_modules/.bin/nyc ./nyc
 before_script:
  - npm run build
+ - rm -rf ./.nyc_output
  - ./test.sh
