@@ -15,3 +15,6 @@ package-lock.json
 logs/
 backup.*
 /lib
+.history
+.nyc_output
+.env

@@ -9,7 +9,7 @@
     "build": "rm -rf ./dist && ./node_modules/.bin/tsc --p tsconfig.json",
     "start": "node dist --max-old-space-size=8192 –max-new-space-size=2048",
     "prestart": "npm install",
-    "test": "./node_modules/.bin/nyc mocha 'test/**/*.spec.ts'",
+    "test": "export $(cat .env | xargs) && ./node_modules/.bin/nyc mocha 'test/**/*.spec.ts'",
     "lint": "tslint src/*/*.ts --format codeframe",
     "fix-lint": "tslint src/*/*.ts --fix",
     "esw": "esw src/*/*.ts --format codeframe --watch",

@@ -22,7 +22,7 @@ export class HotelService {
 	}
 
 	async delete(id: string): Promise<IHotel | null> {
-		return Hotel.findOneAndDelete(<IHotel>{ _id: id });
+		return Hotel.findOneAndDelete({ _id: id });
 	}
 
 	async list(condition: any = {}, paging = defaultPaging) {

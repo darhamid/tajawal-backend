@@ -2,7 +2,7 @@ import Validator from 'fastest-validator';
 import { ValidationError } from '../../exceptions/ValidationError';
 import { IHotel } from '../../models/Hotel';
 
-const hotelSchema = {
+const hotelSchema: any = {
 	name: {
 		type: 'string',
 		min: 1
@@ -34,8 +34,8 @@ const hotelSchema = {
 const validator = new Validator();
 const validateCreate = validator.compile(hotelSchema);
 
-export const validateCreateHotel = (request: IHotel) => {
-	const isValidationPassed = validateCreate(request);
+export const validateCreateHotel = async (request: IHotel): Promise<any> => {
+	const isValidationPassed: any = validateCreate(request);
 	if (typeof isValidationPassed === 'boolean') {
 		return isValidationPassed;
 	} else {
